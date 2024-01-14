@@ -4,12 +4,12 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import LogoVivanti from '../assets/logo-vivanti.svg'
+import LogoVivanti from '../../assets/logo-vivanti.svg'
 import { Col, Row } from 'react-bootstrap';
 
 const NavbarComp = () => {
   return (
-    <header>
+  
          <Navbar expand="sm" className="bg-body-tertiary">
       <Container fluid>
      <Row className='w-100 align-items-center m-0'>
@@ -77,7 +77,7 @@ const NavbarComp = () => {
       </Container>
     </Navbar>
       
-    </header>
+   
   )
 }
 
