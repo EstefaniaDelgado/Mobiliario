@@ -6,7 +6,7 @@ import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <div>
+    <header>
        <Carousel >
       <Carousel.Item>
         <img src={LivingRoom} alt="Living Room" className={styles.carouselImage}/>
@@ -32,7 +32,7 @@ const Header = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-    </div>
+    </header>
   )
 }
 
