@@ -7,6 +7,7 @@ import styles from './Header.module.css'
 const Header = () => {
   return (
     <header>
+      {/* seccion carrusel */}
        <Carousel >
       <Carousel.Item>
         <img src={LivingRoom} alt="Living Room" className={styles.carouselImage}/>
