@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #5b7a9c;
+  --secondary-color: rgb(210, 210, 210);
+  --text-color: #fff;
+}
+
+.card {
+  height: 100%;
+  width: 35%;
+  min-width: 260px;
+  background-color: var(--secondary-color);
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 60%;
+}
+
+.carouselImage {
+  border-radius: 0.8rem 0.8rem 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  text-align: center;
+}
