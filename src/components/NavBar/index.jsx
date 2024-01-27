@@ -19,7 +19,7 @@ const Navbar = () => {
         <img src={LogoVivanti} alt="logo-vivanti" />
       </div>
       {/* MENU */}
-     
+
       <nav className={`${styles.menu} ${openMenu ? styles.show : null}`}>
         {
           <ul className={styles.containerMenu}>
@@ -75,9 +75,10 @@ const Navbar = () => {
       <div className={styles.containerBurguerMenu}>
         <Icon
           icon="mingcute:menu-fill"
-          className={`${styles.iconMenuBurguer} ${openMenu ? styles.iconColor: null}`}
+          className={`${styles.iconMenuBurguer} ${
+            openMenu ? styles.iconColor : null
+          }`}
           onClick={toggleMenu}
-
         />
       </div>
     </header>
