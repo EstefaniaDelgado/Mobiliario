@@ -1,0 +1,33 @@
+.containerForm{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 40%;
+}
+
+.iconMenu{
+    font-size: 1.4rem;
+    color: #fafafa;
+}
+
+.searchInput{
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-bottom: 3px dashed #6AB54B;
+    background-color: transparent;
+    color:#fafafa ;
+    outline: none;
+}
+
+.searchInput::placeholder{
+    color: #fafafa;
+    font-weight: 600;
+    
+}
+
+@media (min-width:1024px){
+    .containerForm{
+       display: none;
+     }
+}
