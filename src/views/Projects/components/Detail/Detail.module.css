@@ -1,0 +1,91 @@
+:root {
+  --bg-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.generalContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.containerImage1 {
+  background-image: url("../../../../assets/image/baby_groot.jpg");
+}
+
+.containerImage2 {
+  background-image: url("../../../../assets/image/batman.jpg");
+}
+
+.containerImage3 {
+  background-image: url("../../../../assets/image/miles_morales.jpg");
+}
+
+.containerImage4 {
+  background-image: url("../../../../assets/image/neon.jpg");
+}
+
+.containerImage5 {
+  background-image: url("../../../../assets/image/paisaje.jpg");
+}
+
+.containerImage6 {
+  background-image: url("../../../../assets/image/luna.jpg");
+}
+
+/* .generalContainer > div {
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+} */
+
+.generalContainer > div {
+  flex: 1;
+  border-radius: 1rem;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.generalContainer > div:hover {
+  flex: 5;
+}
+
+@media (min-width: 768px) {
+  .generalContainer {
+    flex-direction: row;
+    /* height: 30rem; */
+    height: 71%;
+  }
+
+  .generalContainer > div {
+    background-size: auto 100%;
+  }
+}

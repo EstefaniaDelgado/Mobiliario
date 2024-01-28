@@ -3,7 +3,7 @@
   width: 100%;
   margin-bottom: 0.5rem;
   background: fixed no-repeat -315px -180px;
-  background-image: url('../../../../assets/furniture/hero_image.jpg');
+  background-image: url("../../../../assets/furniture/hero_image.jpg");
   background-size: cover;
   overflow: hidden;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .heroContainer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -39,3 +39,4 @@
   transform: translateZ(-1px) scale(2);
   z-index: 2;
 }
+
