@@ -1,7 +1,6 @@
 .heroContainer {
   height: 60vh;
   width: 100%;
-  margin-bottom: 0.5rem;
   background: fixed no-repeat -315px -180px;
   background-image: url("../../../../assets/furniture/hero_image.jpg");
   background-size: cover;

@@ -1,11 +1,10 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import styles from "./Projects.module.css";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
-// import { useState } from "react";
-// import Detail from "./components/Detail";
-// import Modal from "./components/Modal";
+import { useState } from "react";
+import Detail from "./components/Detail";
 
 const array = [
   { id: 1, title: "titulo 1", description: "descripcion 1", image: "url 1" },
@@ -13,18 +12,9 @@ const array = [
 ];
 
 const Projects = () => {
-  // const [modalState, setModalState] = useState(false);
-  // const [selectedProject, setSelectedProject] = useState(null);
+  const [modalState, setModalState] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  // const handleCardClick = (e) => {
-  //   setSelectedProject(e);
-  //   setModalState(!modalState);
-  // };
-
-  // const closeOverlay = () => {
-  //   setOverlayMode(false);
-  //   setSelectedProject(null);
-  // };
 
   return (
     <div>
@@ -35,7 +25,6 @@ const Projects = () => {
       </section>
 
       {/* Carrusel para movil */}
-
       <Carousel>
         {array.map((e) => (
           <Carousel.Item key={`item card: ${e.id}`}>
@@ -45,9 +34,6 @@ const Projects = () => {
                 title={e.title}
                 description={e.description}
                 image={e.image}
-                // onClick={() => {
-                //   setModalState(!modalState);
-                // }}
               />
             </section>
           </Carousel.Item>

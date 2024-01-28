@@ -2,35 +2,17 @@ import { useState } from "react";
 import LivingRoom from "../../../../assets/furniture/living-room.jpg";
 import styles from "./Card.module.css";
 import PropTypes from "prop-types";
-import Detail from "../Detail";
+import { useLocation, useNavigate } from "react-router-dom";
 
-// imagenes para detalles de Projecto
-import BabyGroot from "../../../../assets/image/baby_groot.jpg";
-import Batman from "../../../../assets/image/batman.jpg";
-import MilesMorales from "../../../../assets/image/miles_morales.jpg";
-import Neon from "../../../../assets/image/neon.jpg";
-import Paisaje from "../../../../assets/image/paisaje.jpg";
-import Luna from "../../../../assets/image/luna.jpg";
+const Card = ({ id, title, description, image }) => {
+  const navigate = useNavigate();
 
-const imagesDetail = [
-  [BabyGroot, Batman, MilesMorales, Neon, Paisaje, Luna],
-  [BabyGroot, Batman, MilesMorales, Neon, Paisaje, Luna],
-];
-
-// si se envia el onClick desde el padre se recibe en props;
-const Card = ({ title, description, image, id }) => {
-  const [detailState, setDetailState] = useState(false);
-
-  const handleClick = () => {
-    // if (onClick) {
-    //   onClick();
-    // }
-    setDetailState(true);
+  const handleCardClick = () => {
+    navigate(`detalle/${id}`);
   };
 
   return (
-    // <div className={styles.card} onClick={handleClick}>
-    <div className={styles.card} onClick={handleClick}>
+    <div className={styles.card} onClick={handleCardClick}>
       <div className={styles.imageContainer}>
         <img
           src={LivingRoom}
@@ -43,13 +25,6 @@ const Card = ({ title, description, image, id }) => {
         <p>{description}</p>
         <p>{image}</p>
       </div>
-      {detailState && (
-        <Detail
-          changeState={setDetailState}
-          images={imagesDetail}
-          projectId={id}
-        />
-      )}
     </div>
   );
 };

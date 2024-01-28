@@ -10,6 +10,7 @@
   min-width: 260px;
   background-color: var(--secondary-color);
   border-radius: 0.8rem 0.8rem 0 0;
+  cursor: pointer;
 }
 
 .imageContainer {
