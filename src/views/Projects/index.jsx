@@ -1,24 +1,33 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 import styles from "./Projects.module.css";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
-import { useState } from "react";
-import Detail from "./components/Detail";
+import NavBar from "../../components/NavBar";
+import LivingRoom from "../../assets/furniture/living-room.jpg";
 
-const array = [
-  { id: 1, title: "titulo 1", description: "descripcion 1", image: "url 1" },
-  { id: 2, title: "titulo 2", description: "descripcion 2", image: "url 2" },
+const cardsInformation = [
+  {
+    id: 1,
+    title: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa impedit sed consequatur corporis, pariatur soluta.",
+    image: LivingRoom
+  },
+  {
+    id: 2,
+    title: "Proyecto 2",
+    description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa impedit sed consequatur corporis, pariatur soluta.",
+    image: LivingRoom
+  },
 ];
 
 const Projects = () => {
-  const [modalState, setModalState] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
-
 
   return (
     <div>
-      <h1 className={styles.title}>Proyectos 🔨</h1>
+      <NavBar />
       <Hero />
       <section>
         <h2 className={styles.subtitle}>PROYECTOS</h2>
@@ -26,7 +35,7 @@ const Projects = () => {
 
       {/* Carrusel para movil */}
       <Carousel>
-        {array.map((e) => (
+        {cardsInformation.map((e) => (
           <Carousel.Item key={`item card: ${e.id}`}>
             <section className={styles.cardContainer}>
               <Card

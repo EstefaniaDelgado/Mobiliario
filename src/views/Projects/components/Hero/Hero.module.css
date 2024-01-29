@@ -1,12 +1,14 @@
 .heroContainer {
   height: 60vh;
   width: 100%;
-  background: fixed no-repeat -315px -180px;
-  background-image: url("../../../../assets/furniture/hero_image.jpg");
+  background: fixed no-repeat center -130px;
   background-size: cover;
+  background-image: url("../../../../assets/furniture/hero-projects.jpg");
   overflow: hidden;
   display: flex;
   align-items: center;
+  perspective: 1px;
+  transform-style: preserve-3d;
 }
 
 .hero {
@@ -14,6 +16,9 @@
   text-align: center;
   color: var(--text-color);
   padding: 20px;
+  position: relative;
+  transform: translateZ(-1px) scale(2);
+  z-index: 2;
 }
 
 .heroContainer::before {
@@ -27,15 +32,10 @@
   z-index: -1;
 }
 
-.heroContainer {
-  perspective: 1px;
-  transform-style: preserve-3d;
-  /* overflow-y: scroll; */
+@media (min-width: 1440px) {
+  .heroContainer {
+    background: fixed no-repeat 0px -240px;
+    background-size: cover;
+    background-image: url("../../../../assets/furniture/hero-projects.jpg");
+  }
 }
-
-.hero {
-  position: relative;
-  transform: translateZ(-1px) scale(2);
-  z-index: 2;
-}
-
