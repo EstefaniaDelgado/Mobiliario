@@ -8,7 +8,7 @@
   height: 100%;
   width: 35%;
   min-width: 260px;
-  max-width: 430px;
+  max-width: 269px;
   background-color: var(--secondary-color);
   border-radius: 0.8rem 0.8rem 0 0;
   cursor: pointer;
@@ -46,5 +46,11 @@
 
   .cardImage {
     border-radius: 1rem 1rem 0 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    max-width: 430px;
   }
 }
