@@ -1,5 +1,6 @@
 :root {
   --bg-color: rgba(0, 0, 0, 0.8);
+  --text-color: rgb(255, 255, 255);
 }
 
 .overlay {
@@ -12,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;  
+  z-index: 1000;
 }
 
 .buttonClose {
@@ -42,7 +43,7 @@
   flex-direction: column;
   height: 90%;
   width: 100%;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1rem;
 }
 
@@ -55,8 +56,26 @@
   transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
 }
 
+.containerImage {
+  position: relative;
+}
+
 .containerImage:hover {
   flex: 5;
+}
+
+.containerImage p {
+  display: none;
+}
+
+.containerImage:hover p {
+  display: block;
+  position: absolute;
+  bottom: -1.3rem;
+  color: var(--text-color);
+  margin-bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (min-width: 1024px) {
@@ -65,5 +84,10 @@
     /* height: 30rem; */
     height: 71%;
     padding-right: 35px;
+    gap: 1rem;
+  }
+
+  .containerImage:hover p {
+    bottom: -1.5rem;
   }
 }
