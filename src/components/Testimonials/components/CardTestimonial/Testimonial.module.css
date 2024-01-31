@@ -1,13 +1,18 @@
+:root{
+  --color-fondo:  linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
 .containerCarousel{
   width: 100%;
   max-width: 445px;
   height: 40vh;
   min-height: 350px;
-  background-color: lightblue;
+  background-image: var(--color-fondo);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .imageCarousel{
@@ -19,4 +24,9 @@
 .review{
   line-height: 1.5;
   padding: 1em;
+}
+
+.quotationMarks{
+  width: 25px;
+  padding: 0 5px;
 }

@@ -13,8 +13,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-coverflow';
 import { useEffect, useState } from 'react';
+import QuotationOpen from '../../../../assets/icons/quotation-open.png'
+import QuotationClose from '../../../../assets/icons/quotation-close.png'
 
-const Testimonial = ({ slides }) => {
+const CardTestimonial = ({ slides }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -57,7 +59,7 @@ const Testimonial = ({ slides }) => {
               alt="Testimonio"
               className={styles.imageCarousel}
             />
-            <p className={styles.review}>{slide.review}</p>
+            <p className={styles.review}><img src={QuotationOpen} alt="comillas apertura" className={styles.quotationMarks} /> {slide.review} <img src={QuotationClose} alt="comillas cierre" className={styles.quotationMarks}/></p>
           </div>
         </SwiperSlide>
       ))}
@@ -82,7 +84,7 @@ const Testimonial = ({ slides }) => {
               alt="Testimonio"
               className={styles.imageCarousel}
             />
-            <p className={styles.review}>{slide.review}</p>
+        <p className={styles.review}><img src={QuotationOpen} alt="comillas apertura" className={styles.quotationMarks} />{slide.review}<img src={QuotationClose} alt="comillas cierre" className={styles.quotationMarks}/></p>
           </div>
         </SwiperSlide>
       ))}
@@ -92,4 +94,4 @@ const Testimonial = ({ slides }) => {
   return <>{isMobile ? mobileScreem : tabletScreem}</>;
 };
 
-export default Testimonial;
+export default CardTestimonial;
