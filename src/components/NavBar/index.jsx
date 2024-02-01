@@ -3,6 +3,7 @@ import { Icon } from '@iconify/react';
 import styles from './NavBar.module.css';
 import { useState } from 'react';
 import SearchBar from './components/SearchBar';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [openMenu, setMenuAbierto] = useState(false);
@@ -16,7 +17,9 @@ const Navbar = () => {
     <header>
       {/* LOGO */}
       <div>
-        <img src={LogoVivanti} alt="logo-vivanti" />
+        <Link to={'/'}>
+          <img src={LogoVivanti} alt="logo-vivanti" />
+        </Link>
       </div>
       {/* MENU */}
 
@@ -29,9 +32,9 @@ const Navbar = () => {
               </a>
             </li>
             <li className={styles.itemMenu}>
-              <a href="" className={styles.navLink}>
+              <Link to={'/proyectos'} className={styles.navLink}>
                 Proyectos
-              </a>
+              </Link>
             </li>
             <li className={styles.itemMenu}>
               <a href="" className={styles.navLink}>
