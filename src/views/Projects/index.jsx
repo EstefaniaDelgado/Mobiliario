@@ -54,7 +54,7 @@ const Projects = () => {
   }, []);
 
   {
-    /* Carrusel para movil */
+    /* Carosuel for mobile */
   }
   const carouselMobile = (
     <Carousel>
@@ -74,7 +74,7 @@ const Projects = () => {
   );
 
   {
-    /* Carrusel para desktop */
+    /* Carosuel for desktop */
   }
   const carouselDesktop = (
     <Carousel>

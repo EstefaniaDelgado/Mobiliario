@@ -6,9 +6,8 @@
 
 .card {
   height: 100%;
-  width: 35%;
+  width: 40%;
   min-width: 260px;
-  max-width: 269px;
   background-color: var(--secondary-color);
   border-radius: 0.8rem 0.8rem 0 0;
   cursor: pointer;
@@ -41,9 +40,10 @@
 @media (min-width: 768px) {
   .card {
     width: 50%;
+    max-width: 269px;
     border-radius: 1rem 1rem 0 0;
   }
-
+  
   .cardImage {
     border-radius: 1rem 1rem 0 0;
   }
@@ -51,6 +51,7 @@
 
 @media (min-width: 1024px) {
   .card {
-    max-width: 430px;
+    width: 25%;
+    max-width: 500px;
   }
 }
