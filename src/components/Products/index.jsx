@@ -4,7 +4,7 @@ import Product from './components'
 const Products = () => {
   return (
     <div>
-        <h3>Productos</h3>
+        <h2 className={styles.subtitle} >Productos</h2>
       <Product/>
     </div>
   )
