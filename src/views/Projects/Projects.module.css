@@ -17,8 +17,7 @@
 .subtitle {
   display: inline-block;
   padding: 0.9rem 1.5rem;
-  margin: 1rem 0;
-  /* padding: 0.9rem 5rem; */
+  margin: 3rem 0;
   background-color: var(--primary-color);
   border-radius: 0 0.7rem 0.7rem 0;
   text-align: center;
@@ -44,5 +43,11 @@
 @media (min-width: 768px) {
   .cardContainer {
     height: 70vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    padding: 0.9rem 5rem;
   }
 }
