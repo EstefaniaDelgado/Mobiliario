@@ -1,22 +1,38 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import PictureAboutUs from '../../assets/about-us.jpg';
-import styles from './AboutUs.module.css'
+// import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
+import PictureAboutUs from "../../assets/about-us.jpg";
+import styles from "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
     <section>
-    <Card className='w-100 border-0' >
-         <Card.Title className='text-align-center'>Card Title</Card.Title>
-      <Card.Body className="d-flex justify-content-flex-start align-items-start">
-        <Card.Img  src={PictureAboutUs}  className='w-50'/>
-       
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-      </Card.Body>
-    </Card>
+      <h2 className={styles.subtitle}>SOBRE NOSOTROS</h2>
+      <div className={styles.cardContainer}>
+        <section className={styles.card}>
+          <article className={styles.containerImageCard}>
+            <img
+              className={styles.imageCard}
+              src={PictureAboutUs}
+              alt="Sobre Nosotros"
+            />
+          </article>
+          <article className={styles.descriptionContainer}>
+            <p className={styles.description}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis, recusandae ratione nam amet, odio ipsa dolorum
+              tenetur suscipit veniam voluptate similique quod, delectus
+              asperiores aperiam nesciunt molestias! Nemo, perferendis laborum.
+              Magnam cum earum nam nostrum, quaerat molestiae itaque error iste
+              doloribus atque nemo. Optio ipsam, quo iusto nemo ipsum
+              perspiciatis nisi architecto odio ducimus consequuntur expedita
+              eaque et. Temporibus, unde? Libero, quas? Reprehenderit atque ea
+              dolorum animi repellendus, quos nulla, at laudantium tempore
+              cumque dolor, quasi optio consequuntur modi. Voluptate, provident
+              repellendus quo eligendi sint sequi in tempora? Id, illum!
+            </p>
+          </article>
+        </section>
+      </div>
     </section>
   );
 };
